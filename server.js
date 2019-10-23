@@ -25,5 +25,5 @@ require("./app/routing/htmlRoutes")(app);
 // The below code effectively "starts" our server
 
 app.listen(PORT, function () {
-    console.log("App listening on PORT: " + PORT);
+    console.log("App listening on http://localhost:" + PORT);
 });
