@@ -514,6 +514,16 @@
             function renderData() {
                 $.get("/api/friends", function (data) {
                     console.log(data);
+                    for (var i = 0; i < data.length; i++) {
+                        console.log(data[i].scores);
+                    }
+                    console.log("New friend scores: " + newFriend.scores[0])
+                    for (var i = 0; i < data.length; i++) {
+                        console.log("Old friend scores: " + data[i].scores[0])
+                        console.log("New Friend score 0 minus all friends score 0: " + Math.abs(parseInt(newFriend.scores[0]) - parseInt(data[i].scores[0])))
+                    }
+
+
                     var newDiv = $("<div>")
                     newDiv.append("<p>")
                     newDiv.append(JSON.stringify(data));
