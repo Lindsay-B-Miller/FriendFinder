@@ -19,6 +19,7 @@ module.exports = function (app) {
     // When a user submits form data (a JSON object) the JSON is pushed to the appropriatet JS array
     app.post("/api/friends", function (req, res) {
         friendsData.push(req.body);
+        console.log(req.body);
         // The "server" will respond to requests and let users know if they have a match
         if (friendsData.length > 1) {
             res.json(true);

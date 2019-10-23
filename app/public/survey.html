@@ -26,6 +26,13 @@
             </div>
         </form>
         <form>
+            <div class="col-auto">
+                <label class="sr-only" for="inlineFormInput">Photo</label>
+                <input type="text" class="form-control mb-2 friend-photo" id="inlineFormInput"
+                    placeholder="http://example.com">
+            </div>
+        </form>
+        <form>
             <fieldset class="form-group q1">
                 <div class="row">
                     <legend class="col-form-label col-sm-2 pt-0">First Question</legend>
@@ -452,7 +459,6 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
@@ -475,26 +481,33 @@
 
     <!-- JAVASCRIPT -->
     <script type="text/javascript">
+
+        $.ajaxSetup({
+            contentType: "application/json; charset=utf-8"
+        });
         // This code is creating the front-end javascript which "POSTS" our form data to the eexpress server
         $("#submit").on("click", function (event) {
             event.preventDefault();
             var newFriend = {
-                friendName: $(".friend-name").val().trim(),
-                qOne: $(".q1 input:radio:checked").val(),
-                qTwo: $(".q2 input:radio:checked").val(),
-                qThree: $(".q3 input:radio:checked").val(),
-                qFour: $(".q4 input:radio:checked").val(),
-                qFive: $(".q5 input:radio:checked").val(),
-                qSix: $(".q6 input:radio:checked").val(),
-                qSeven: $(".q7 input:radio:checked").val(),
-                qEight: $(".q8 input:radio:checked").val(),
-                qNine: $(".q9 input:radio:checked").val(),
-                qTen: $(".q10 input:radio:checked").val()
+                name: $(".friend-name").val().trim(),
+                photo: $(".friend-photo").val().trim(),
+                scores: [
+                    parseInt($(".q1 input:radio:checked").val()),
+                    parseInt($(".q2 input:radio:checked").val()),
+                    parseInt($(".q3 input:radio:checked").val()),
+                    parseInt($(".q4 input:radio:checked").val()),
+                    parseInt($(".q5 input:radio:checked").val()),
+                    parseInt($(".q6 input:radio:checked").val()),
+                    parseInt($(".q7 input:radio:checked").val()),
+                    parseInt($(".q8 input:radio:checked").val()),
+                    parseInt($(".q9 input:radio:checked").val()),
+                    parseInt($(".q10 input:radio:checked").val())
+                ]
             };
 
-            console.log(newFriend);
+            var stringifiedFriend = JSON.stringify(newFriend);
 
-            $.post("/api/friends", newFriend, function (data) {
+            $.post("/api/friends", stringifiedFriend, function (data) {
                 console.log(data);
             })
 
