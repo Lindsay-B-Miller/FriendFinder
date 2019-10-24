@@ -22,7 +22,8 @@
         <form class="needs-validation" novalidate>
             <div class="col-auto">
                 <label class="sr-only" for="validationCustom03">Name</label>
-                <input type="text" class="form-control mb-2 friend-name" id="validationCustom03" placeholder="Jane Doe">
+                <input type="text" class="form-control mb-2 friend-name" id="validationCustom03" placeholder="Jane Doe"
+                    required>
                 <div class="invalid-feedback">
                     Please enter your full name.
                 </div>
@@ -32,7 +33,7 @@
             <div class="col-auto">
                 <label class="sr-only" for="inlineFormInput">Link to Photo Image</label>
                 <input type="text" class="form-control mb-2 friend-photo" id="inlineFormInput"
-                    placeholder="http://example.com">
+                    placeholder="http://example.com" required>
             </div>
         </form>
         <form>
@@ -458,13 +459,8 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <img id="modalImage" src="" class="card-img-top">
                 <div class="modal-body">
-                    <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text"></p>
-                        </div>
-                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -571,7 +567,6 @@
                 // Adding Photo
                 console.log(data[indexOfFriend].photo);
                 $(".card-img-top").attr("src", data[indexOfFriend].photo);
-
 
             })
         }
