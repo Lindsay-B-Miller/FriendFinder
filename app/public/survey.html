@@ -10,37 +10,44 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Take the Friends Finder Survey</h1>
-    <div class="container">
-        <h3>Complete your profile:</h3>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4 text-info">Take the Friends Finder Survey</h1>
+            <p class="lead">Complete your profile to see your match:</p>
+        </div>
+    </div>
+
+    <!-- <h1 class="text-center bg-info text-white font-weight-light mb-5 p-3">Take the Friends Finder Survey</h1> -->
+
+    <div class="container border border-info rounded p-4 mb-3">
+        <!-- <h3 class="font-weight-light">Complete your profile:</h3> -->
         <!-- Survey -->
 
-        <form class="needs-validation" novalidate>
-            <div class="col-auto">
-                <label class="sr-only" for="validationCustom03">Name</label>
-                <input type="text" class="form-control mb-2 friend-name" id="validationCustom03" placeholder="Jane Doe"
-                    required>
-                <div class="invalid-feedback">
-                    Please enter your full name.
-                </div>
+        <form class="mt-4 mr-4 ml-4 mb-0">
+            <div class="form-group col-auto mb-5">
+                <label for="exampleFormControlInput1">Name</label>
+                <input type="text" class="form-control mb-2 friend-photo friend-name" id="exampleFormControlInput1"
+                    placeholder="Jane Doe">
             </div>
         </form>
-        <form>
-            <div class="col-auto">
-                <label class="sr-only" for="inlineFormInput">Link to Photo Image</label>
-                <input type="text" class="form-control mb-2 friend-photo" id="inlineFormInput"
-                    placeholder="http://example.com" required>
+        <form class="mt-0 mr-4 ml-4 mb-4">
+            <div class="form-group col-auto mb-5">
+                <label for="exampleFormControlInput1">Link to Photo Image</label>
+                <input type="email" class="form-control mb-2 friend-photo" id="exampleFormControlInput1"
+                    placeholder="http://example.com">
             </div>
         </form>
-        <form>
+        <form class="m-5">
             <fieldset class="form-group q1">
                 <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0">First Question</legend>
-                    <div class="col-sm-10">
+                    <legend class="col-form-label col-sm-9 pt-0">I like to go to the grocery store in my pajamas.
+                    </legend>
+                    <div class="col-sm-3">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1"
                                 checked>
@@ -76,11 +83,11 @@
                 </div>
             </fieldset>
         </form>
-        <form>
+        <form class="m-5">
             <fieldset class="form-group q2">
                 <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0">Second Question</legend>
-                    <div class="col-sm-10">
+                    <legend class="col-form-label col-sm-9 pt-0">I've read all of the Harry Potter books.</legend>
+                    <div class="col-sm-3">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1"
                                 checked>
@@ -116,11 +123,11 @@
                 </div>
             </fieldset>
         </form>
-        <form>
+        <form class="m-5">
             <fieldset class="form-group q3">
                 <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0">Third Question</legend>
-                    <div class="col-sm-10">
+                    <legend class="col-form-label col-sm-9 pt-0">My favorite root vegetable is a parsnip.</legend>
+                    <div class="col-sm-3">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1"
                                 checked>
@@ -156,11 +163,12 @@
                 </div>
             </fieldset>
         </form>
-        <form>
+        <form class="m-5">
             <fieldset class="form-group q4">
                 <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0">Fourth Question</legend>
-                    <div class="col-sm-10">
+                    <legend class="col-form-label col-sm-9 pt-0">I hate it when people eat with their mouths open.
+                    </legend>
+                    <div class="col-sm-3">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1"
                                 checked>
@@ -196,11 +204,12 @@
                 </div>
             </fieldset>
         </form>
-        <form>
+        <form class="m-5">
             <fieldset class="form-group q5">
                 <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0">Fifth Question</legend>
-                    <div class="col-sm-10">
+                    <legend class="col-form-label col-sm-9 pt-0">I get to work at the exact same time every day.
+                    </legend>
+                    <div class="col-sm-3">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1"
                                 checked>
@@ -236,11 +245,12 @@
                 </div>
             </fieldset>
         </form>
-        <form>
+        <form class="m-5">
             <fieldset class="form-group q6">
                 <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0">Sixth Question</legend>
-                    <div class="col-sm-10">
+                    <legend class="col-form-label col-sm-9 pt-0">Slipping on a banana peel is one of my worst fears.
+                    </legend>
+                    <div class="col-sm-3">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1"
                                 checked>
@@ -276,11 +286,11 @@
                 </div>
             </fieldset>
         </form>
-        <form>
+        <form class="m-5">
             <fieldset class="form-group q7">
                 <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0">Seventh Question</legend>
-                    <div class="col-sm-10">
+                    <legend class="col-form-label col-sm-9 pt-0">My frinds consider me "aloof".</legend>
+                    <div class="col-sm-3">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1"
                                 checked>
@@ -316,11 +326,11 @@
                 </div>
             </fieldset>
         </form>
-        <form>
+        <form class="m-5">
             <fieldset class="form-group q8">
                 <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0">Eighth Question</legend>
-                    <div class="col-sm-10">
+                    <legend class="col-form-label col-sm-9 pt-0">Baking is one of my greatest passions.</legend>
+                    <div class="col-sm-3">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1"
                                 checked>
@@ -356,11 +366,11 @@
                 </div>
             </fieldset>
         </form>
-        <form>
+        <form class="m-5">
             <fieldset class="form-group q9">
                 <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0">Ninth Question</legend>
-                    <div class="col-sm-10">
+                    <legend class="col-form-label col-sm-9 pt-0">I love the rain.</legend>
+                    <div class="col-sm-3">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1"
                                 checked>
@@ -396,11 +406,12 @@
                 </div>
             </fieldset>
         </form>
-        <form>
+        <form class="m-5">
             <fieldset class="form-group q10">
                 <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0">Tenth Question</legend>
-                    <div class="col-sm-10">
+                    <legend class="col-form-label col-sm-9 pt-0">I would consider owning a pet parrot if it would make
+                        my spouse happy.</legend>
+                    <div class="col-sm-3">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1"
                                 checked>
@@ -436,9 +447,9 @@
                 </div>
             </fieldset>
         </form>
-        <div class="form-group row">
+        <div class="form-group row m-4">
             <div class="col-sm-10">
-                <button type="button" class="btn btn-primary" id="submit" data-toggle="modal"
+                <button type="button" class="btn btn-info" id="submit" data-toggle="modal"
                     data-target="#exampleModalScrollable">
                     Submit
                 </button>
@@ -454,7 +465,7 @@
         <div class="modal-dialog modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalScrollableTitle">Best Friend Match</h5>
+                    <h5 class="modal-title text-secondary" id="exampleModalScrollableTitle">Best Friend Match</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
